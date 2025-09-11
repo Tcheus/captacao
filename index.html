@@ -5,48 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Motorista</title>
     <style>
-        body {
-            font-family: 'Arial Black', sans-serif;
-            margin: 20px;
-            background: url('captacao.png') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-        }
-        form {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.8);
-        }
-        label, input {
-            display: block;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        h2 {
-            text-align: center;
-        }
-        button {
-            background-color: darkblue;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: lightblue;
-        }
-        .download-button {
-            display: block;
-            width: 400px;
-            margin: 10px auto;
-        }
-    </style>
+    body {
+        font-family: 'Arial Black', sans-serif;
+        margin: 20px;
+        background: url('captacao.png') no-repeat center center fixed;
+        background-size: cover;
+        text-align: center;
+    }
+    form {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8);
+    }
+    label, input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    h2 {
+        text-align: center;
+    }
+    button {
+        background-color: darkblue;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%; /* largura total dentro do form */
+        margin-top: 10px;
+    }
+    button:hover {
+        background-color: lightblue;
+    }
+    .download-button {
+        width: 100%; /* igual ao botão ENVIAR */
+        max-width: 400px; /* segue a largura do form */
+        margin: 10px auto;
+    }
+</style>
+
 </head>
 <body>
     <h2>Cadastro de Motorista</h2>
