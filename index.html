@@ -50,47 +50,42 @@
 
 </head>
 <body>
-    <h2>Cadastro de Motorista</h2>
-    <a href="termo-contratual-agregados-atualizado.pdf" download>
-        <button class="download-button">Baixar Termo Contratual</button>
-    </a>
-    <br><br>
-</form id="cadastroMotorista">
-    <form action="https://formsubmit.co/f416b6fcfeb0e803d0ec47069563deae" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <label for="nome">Nome Completo</label>
-        <input type="text" name="name" id="nome" placeholder="Digite seu nome completo" maxlength="40" required>
-
-        <label for="cnh">CNH</label>
-        <input type="text" name="cnh" id="cnh" maxlength="11" required>
-
-        <label for="crlv">CRLV</label>
-        <input type="text" name="crlv" id="crlv" maxlength="11" required>
-
-        <label for="antt">ANTT</label>
-        <input type="text" name="antt" id="antt" required>
-
-        <label for="pis">PIS</label>
-        <input type="text" name="pis" id="pis" maxlength="11" required>
+    <h2>CADASTRO DE MOTORISTA</h2>
     
-        <label for="cnhArquivo">Imagem ou PDF da CNH</label>
-        <input type="file" name="cnhArquivo" id="cnhArquivo" accept="image/*,application/pdf" required>
+<form action="http://localhost:3000/enviar" method="POST" enctype="multipart/form-data">
+  <label>Nome</label>
+  <input type="text" name="nome" required>
 
-        <label for="comprovante">Comprovante de Residência</label>
-        <input type="file" name="Comprovante" id="comprovante" accept="image/*" required>
+  <label>CNH</label>
+  <input type="text" name="cnh" required>
 
-        <label for="fotosVeiculo">Fotos com Veículo</label>
-        <input type="file" name="fotosVeiculo" id="fotosVeiculo" accept="image/*" multiple required>
+  <label>CRLV</label>
+  <input type="text" name="crlv" required>
 
-        <label for="uploadContrato">Enviar Termo Preenchido</label>
-        <input type="file" name="uploadContrato" id="uploadContrato" accept="application/pdf" required>
+  <label>ANTT</label>
+  <input type="text" name="antt" required>
 
-        <label for="email">EMAIL</label>
-        <input type="email" name="email" id="email" placeholder="Digite seu email" required>
-        
-        <button type="submit">ENVIAR</button>
-    </form>
+  <label>PIS</label>
+  <input type="text" name="pis" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <label>Arquivo CNH</label>
+  <input type="file" name="cnhArquivo" required>
+
+  <label>Comprovante de Residência</label>
+  <input type="file" name="comprovante" required>
+
+  <label>Fotos do Veículo</label>
+  <input type="file" name="fotosVeiculo" multiple required>
+
+  <label>Contrato Preenchido</label>
+  <input type="file" name="uploadContrato" required>
+
+  <button type="submit">Enviar</button>
 </form>
+
     <script>
         document.getElementById("cadastroMotorista").addEventListener("submit", function(event) {
             event.preventDefault();
