@@ -52,38 +52,38 @@
 <body>
     <h2>CADASTRO DE MOTORISTA</h2>
     
-<form action="http://localhost:3000/enviar" method="POST" enctype="multipart/form-data">
-  <label>Nome</label>
-  <input type="text" name="nome" required>
+<form action="enviar.php" method="POST" enctype="multipart/form-data">
+    <label for="nome">Nome Completo</label>
+    <input type="text" name="nome" id="nome" required>
 
-  <label>CNH</label>
-  <input type="text" name="cnh" required>
+    <label for="cnh">CNH</label>
+    <input type="text" name="cnh" id="cnh" required>
 
-  <label>CRLV</label>
-  <input type="text" name="crlv" required>
+    <label for="crlv">CRLV</label>
+    <input type="text" name="crlv" id="crlv" required>
+    
+    <label for="antt">ANTT</label>
+    <input type="text" name="antt" id="antt" required>
 
-  <label>ANTT</label>
-  <input type="text" name="antt" required>
+    <label for="pis">PIS</label>
+    <input type="text" name="antt" id="pis" required>
 
-  <label>PIS</label>
-  <input type="text" name="pis" required>
+    <label for="email">EMAIL</label>
+    <input type="email" name="email" id="email" required>
 
-  <label>Email</label>
-  <input type="email" name="email" required>
+    <label for="cnhArquivo">Imagem ou PDF da CNH</label>
+    <input type="file" name="cnhArquivo" id="cnhArquivo" accept="image/*,application/pdf" required>
 
-  <label>Arquivo CNH</label>
-  <input type="file" name="cnhArquivo" required>
+    <label for="comprovante">Comprovante de Residência</label>
+    <input type="file" name="comprovante" id="comprovante" accept="image/*" required>
 
-  <label>Comprovante de Residência</label>
-  <input type="file" name="comprovante" required>
+    <label for="fotosVeiculo">Fotos com Veículo</label>
+    <input type="file" name="fotosVeiculo[]" id="fotosVeiculo" accept="image/*" multiple required>
 
-  <label>Fotos do Veículo</label>
-  <input type="file" name="fotosVeiculo" multiple required>
+    <label for="uploadContrato">Enviar Termo Preenchido</label>
+    <input type="file" name="uploadContrato" id="uploadContrato" accept="application/pdf" required>
 
-  <label>Contrato Preenchido</label>
-  <input type="file" name="uploadContrato" required>
-
-  <button type="submit">Enviar</button>
+    <button type="submit">ENVIAR</button>
 </form>
 
     <script>
